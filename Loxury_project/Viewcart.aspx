@@ -23,7 +23,7 @@
         <tr>
             <td class="auto-style1">&nbsp;</td>
             <td>
-                <asp:GridView ID="GridView1" runat="server" Width="422px" DataKeyNames="Cart_Id">
+                <asp:GridView ID="GridView1" runat="server" Width="422px" DataKeyNames="Cart_Id" OnRowCancelingEdit="GridView1_RowCancelingEdit" OnRowDeleting="GridView1_RowDeleting" OnRowEditing="GridView1_RowEditing1" OnRowUpdating="GridView1_RowUpdating">
                     <Columns>
                         <asp:CommandField ShowEditButton="True" />
                         <asp:CommandField ShowDeleteButton="True" />
@@ -37,7 +37,9 @@
         </tr>
         <tr>
             <td class="auto-style1">&nbsp;</td>
-            <td>&nbsp;</td>
+            <td>
+                <asp:Button ID="Button1" runat="server" BackColor="#FF9900" Font-Bold="True" Text="Confirm" OnClick="Button1_Click" />
+            </td>
         </tr>
         <tr>
             <td class="auto-style1">&nbsp;</td>

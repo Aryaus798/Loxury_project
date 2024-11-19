@@ -14,7 +14,7 @@ namespace Loxury_project
 
         public ConClass()
         {
-            con = new SqlConnection(@"server=VICTUS\SQLEXPRESS02;database=project;Integrated security=True");
+            con = new SqlConnection(@"server=VICTUS\SQLEXPRESS02;database=project;Integrated security=True;");
         }
         public int Fun_exenonquery(string sql)
         {
@@ -73,5 +73,38 @@ namespace Loxury_project
             da.Fill(dt);
             return dt;
         }
+        public void Fn_nonquery(SqlCommand cmd)
+        {
+            if (con.State == ConnectionState.Open)
+            {
+                con.Close();
+            }
+            cmd.Connection = con;
+            con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
+        public DataSet fun_exeAdapter(string query, SqlParameter[] parameters)
+        {
+            using (SqlConnection conn = new SqlConnection(@"server=VICTUS\SQLEXPRESS02;database=project;Integrated security=True"))
+            {
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    if (parameters != null)
+                    {
+                        cmd.Parameters.AddRange(parameters);
+                    }
+
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                    {
+                        DataSet ds = new DataSet();
+                        conn.Open();
+                        adapter.Fill(ds);
+                        return ds;
+                    }
+                }
+            }
+        }
+
     }
 }

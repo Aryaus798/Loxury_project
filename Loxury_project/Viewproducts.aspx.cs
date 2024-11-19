@@ -18,7 +18,7 @@ namespace Loxury_project
                 if (Session["sid"] != null)
                 {
 
-                    string sel = "select * from Product_tab where Cat_Id='" + Session["sid"].ToString() + "'";
+                    string sel = "select * from Product_tab where Cat_Id='" + Session["sid"] + "'";
                     DataSet ds = obj.fun_exeAdapter(sel);
                     DataList1.DataSource = ds;
                     DataList1.DataBind();

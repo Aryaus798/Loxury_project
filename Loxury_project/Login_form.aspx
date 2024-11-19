@@ -4,7 +4,7 @@
    <title>User Registration</title>
     <style type="text/css">
         body {
-            background-color: #fefbd8; /* Light yellowish background */
+            background-color: white; /* Light yellowish background */
             font-family: Arial, sans-serif;
           /*  margin: 0;
             padding: 20px;*/

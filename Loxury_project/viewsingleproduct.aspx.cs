@@ -53,18 +53,21 @@ namespace Loxury_project
             }
             string productPrice = "Select Price from Product_tab where Product_Id='" + Session["productId"] + "' ";
             string SingleProductAmount = obj.fun_exescalar(productPrice);
-            //int singleProductAmount = Convert.ToInt32(SingleProductAmount);
             int totalAmount = Convert.ToInt32(SingleProductAmount) * Convert.ToInt32(TextBox1.Text);
 
-            string InsCart = "insert into Cart_tab values('" + newId + "','" + Session["uid"] + "','" + Session["productId"] + "','" + TextBox1.Text + "','" + totalAmount + "')";
+            string InsCart = "insert into Cart_tab values('" + newId + "','" + Session["uid"] + "','" + Session["productId"] + "','" 
+                + TextBox1.Text + "','" + totalAmount + "')";
             int insCount = obj.Fun_exenonquery(InsCart);
             if (insCount == 1)
             {
                 Label4.Text = "ITEM ADDED TO CART";
-                // txt_count.Text = " ";
-                Response.Redirect("Viewcart.aspx");
             
             }
+        }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Viewcart.aspx");
         }
     }
 }

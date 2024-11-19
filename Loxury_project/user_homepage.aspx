@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
      <style type="text/css">
         body {
-            background-color: #fefbd8; /* Light yellowish background */
+            background-color: white; /* Light yellowish background */
             font-family: Arial, sans-serif;
           /*  margin: 0;
             padding: 20px;*/
@@ -46,7 +46,7 @@
              width: 604px;
          }
          .auto-style2 {
-             width: 234px;
+             width: 196px;
          }
          .product-item {
     border-top: 1px solid #ddd;
@@ -100,7 +100,7 @@
 }
 
          .auto-style3 {
-             width: 234px;
+             width: 196px;
              height: 32px;
          }
          .auto-style4 {
@@ -117,12 +117,7 @@
          }
 
 
-         .auto-style7 {
-             width: 1296px;
-         }
-
-
-
+         
          </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -130,28 +125,18 @@
     <table class="w-100">
         <tr>
             <td class="auto-style2">&nbsp;</td>
-            <td class="auto-style5">&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="auto-style2">&nbsp;</td>
-            <td class="auto-style5">&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="auto-style2">&nbsp;</td>
             <td class="auto-style5">
            
 
               
-                <asp:DataList  ID="DataList1" runat="server" RepeatColumns="5" Width="1215px" CellPadding="2" CellSpacing="2" CssClass="product-list" Height="486px">
+                <asp:DataList  ID="DataList1" runat="server" RepeatColumns="5" Width="1205px" CellPadding="2" CellSpacing="2" CssClass="product-list" Height="389px">
                     <ItemTemplate>
                         <div class="category-list">
                         <table class="w-100">
                             <tr>
                                 <td>
                                     
-                                    <asp:ImageButton ID="ImageButton1" runat="server" Height="119px" ImageUrl='<%# Eval("Image") %>' Width="122px" CssClass="img-box" CommandArgument='<%# Eval("Cat_ID") %>' OnCommand="ImageButton1_Command" />
+                                    <asp:ImageButton ID="ImageButton1" runat="server" Height="119px" ImageUrl='<%# Eval("Image") %>' Width="122px" CssClass="img-box" CommandArgument='<%# Eval("Cat_Id") %>' OnCommand="ImageButton1_Command" />
                                        
                                 </td>
                                 <td>&nbsp;</td>
@@ -175,6 +160,16 @@
              
             
 
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style2">&nbsp;</td>
+            <td class="auto-style5">
+           
+
+              
+                <asp:Button ID="Button1" runat="server" BackColor="#FF9900" OnClick="Button1_Click" Text="FEEDBACK" Width="1240px" />
             </td>
             <td>&nbsp;</td>
         </tr>

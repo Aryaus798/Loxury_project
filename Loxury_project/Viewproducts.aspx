@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
      <style type="text/css">
         body {
-            background-color: #fefbd8; /* Light yellowish background */
+            background-color: white; /* Light yellowish background */
             font-family: Arial, sans-serif;
            /* margin: 0;
             padding: 20px;*/
@@ -48,10 +48,7 @@
          .auto-style2 {
              width: 230px;
          }
-         .auto-style3 {
-             width: 40px;
-         }
-         .product-item {
+          .product-item {
     list-style: none; /* Remove bullet points */
     padding: 0; /* Remove default padding */
     margin: 0; /* Remove default margin */
@@ -94,6 +91,10 @@
     background-color: #218838; /* Darker green on hover */
 }
 
+         .auto-style3 {
+             width: 40px;
+         }
+        
         </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -106,9 +107,10 @@
         <tr>
             <td class="auto-style2">&nbsp;</td>
             <td>
-                <asp:DataList ID="DataList1" runat="server" RepeatColumns="5" Height="360px" Width="1135px" CssClass="product-item" >
+                 
+                <asp:DataList ID="DataList1" runat="server" RepeatColumns="5" Height="423px" Width="1192px" CssClass="product-item" >
                     <ItemTemplate>
-                        <div class="product-list">
+                       <div class="product-list">
                         <table class="w-100">
                             <tr>
                                 <td class="auto-style3">&nbsp;</td>
@@ -139,9 +141,10 @@
                                 <td>&nbsp;</td>
                             </tr>
                         </table>
-                            </div>
+                        </div>   
                     </ItemTemplate>
                 </asp:DataList>
+                      
             </td>
         </tr>
         <tr>

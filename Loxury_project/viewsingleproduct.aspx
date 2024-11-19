@@ -127,7 +127,9 @@
                 <asp:Button ID="Button1" runat="server" BackColor="#FF9900" Font-Bold="True" Font-Names="Bahnschrift Light SemiCondensed" ForeColor="Black" Height="49px" Text="ADD TO CART" Width="165px" ValidationGroup="addcart" OnClick="Button1_Click" />
                 <asp:Button ID="Button2" runat="server" BackColor="#FF9900" Font-Bold="True" Font-Names="Bahnschrift Light SemiCondensed" ForeColor="Black" Height="49px" Text="CONTINUE" Width="167px" OnClick="Button2_Click" />
             </td>
-            <td>&nbsp;</td>
+            <td>
+                <asp:Button ID="Button3" runat="server" BackColor="#FF9900" Font-Bold="True" Font-Names="Bahnschrift Light SemiCondensed" ForeColor="Black" Height="49px" Text="VIEW CART" Width="167px" OnClick="Button3_Click" />
+            </td>
         </tr>
         <tr>
             <td class="auto-style7"></td>

@@ -24,5 +24,11 @@ namespace Loxury_project
         {
             Response.Redirect("Product.aspx");
         }
+
+
+        protected void ImageButton3_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("viewfeed.aspx");
+        }
     }
 }

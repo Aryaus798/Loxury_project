@@ -1,9 +1,9 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site2.Master" AutoEventWireup="true" CodeBehind="admin_regform.aspx.cs" Inherits="Loxury_project.admin_regform" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site3.Master" AutoEventWireup="true" CodeBehind="adminregform.aspx.cs" Inherits="Loxury_project.adminregform" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-     <title></title>
+    <title></title>
  
     <style type="text/css">
-        body {
+      body {
             background-color: #fefbd8; /* Light yellowish background */
             font-family: Arial, sans-serif;
             margin: 0;
@@ -93,7 +93,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <body>
+      <body>
     <form id="form1" >
         <table class="auto-style1">
             <tr>

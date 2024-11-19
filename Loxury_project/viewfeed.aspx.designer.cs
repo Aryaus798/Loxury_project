@@ -11,7 +11,7 @@ namespace Loxury_project
 {
 
 
-    public partial class Viewcart
+    public partial class viewfeed
     {
 
         /// <summary>
@@ -22,14 +22,5 @@ namespace Loxury_project
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView GridView1;
-
-        /// <summary>
-        /// Button1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
     }
 }

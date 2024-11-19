@@ -1,6 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site2.Master" AutoEventWireup="true" CodeBehind="user_regform.aspx.cs" Inherits="Loxury_project.user_regform" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site3.Master" AutoEventWireup="true" CodeBehind="user_regform.aspx.cs" Inherits="Loxury_project.user_regform" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-     <title></title>
+    
     <title>User Registration</title>
      <style type="text/css">
         body {
@@ -45,10 +45,7 @@
             background-color: #ffb300; /* Darker on hover */
         }
         .auto-style1 {
-            width: 605px;
-        }
-        .auto-style2 {
-            width: 299px;
+            width: 1130px;
         }
         .auto-style3 {
             width: 221px;
@@ -57,13 +54,9 @@
             width: 348px;
         }
         .auto-style5 {
-            width: 299px;
-            height: 32px;
-        }
-        .auto-style6 {
-            width: 221px;
-            height: 32px;
-        }
+             width: 420px;
+             height: 32px;
+         }
         .auto-style7 {
             width: 348px;
             height: 32px;
@@ -72,18 +65,11 @@
             height: 32px;
         }
         </style>
-    
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <body>
+     <body>
     <form id="form1">
         <table class="auto-style1">
-            <tr>
-                <td class="auto-style5">&nbsp;</td>
-                <td class="auto-style3">&nbsp;</td>
-                <td class="auto-style4">&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
             <tr>
                 <td class="auto-style5">&nbsp;</td>
                 <td class="auto-style3">&nbsp;</td>

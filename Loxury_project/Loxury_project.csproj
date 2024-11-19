@@ -44,6 +44,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -68,13 +70,25 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="about.html" />
+    <Content Include="adminregform.aspx" />
     <Content Include="admin_homepage.aspx" />
-    <Content Include="admin_regform.aspx" />
     <Content Include="Category.aspx" />
+    <Content Include="Connected Services\BankService\Loxury_project.BankService.CompositeType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\BankService\Service.disco" />
+    <None Include="Connected Services\BankService\configuration91.svcinfo" />
+    <None Include="Connected Services\BankService\configuration.svcinfo" />
+    <None Include="Connected Services\BankService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="contact.html" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\responsive.css" />
     <Content Include="css\style.css" />
+    <Content Include="images\download.jpg" />
+    <Content Include="Feedback.aspx" />
     <Content Include="fonts\ethnocentric\read-this.html" />
     <Content Include="fonts\Poppins\OFL.txt" />
     <Content Include="images\about-img.png" />
@@ -100,6 +114,7 @@
     <Content Include="images\phone.png" />
     <Content Include="images\prev-black.png" />
     <Content Include="images\prev.png" />
+    <Content Include="images\product.jpg" />
     <Content Include="images\ring-img.jpg" />
     <Content Include="images\search-icon.png" />
     <Content Include="images\slider-img.png" />
@@ -110,30 +125,33 @@
     <Content Include="js\custom.js" />
     <Content Include="js\jquery-3.4.1.min.js" />
     <Content Include="Login_form.aspx" />
+    <Content Include="mailpage.aspx" />
+    <Content Include="paymentpage.aspx" />
     <Content Include="Product.aspx" />
     <Content Include="user_homepage.aspx" />
     <Content Include="user_regform.aspx" />
+    <Content Include="Viewbill.aspx" />
     <Content Include="Viewcart.aspx" />
+    <Content Include="viewfeed.aspx" />
     <Content Include="Viewproducts.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
-    <Content Include="WebForm2.aspx" />
     <Content Include="viewsingleproduct.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="adminregform.aspx.cs">
+      <DependentUpon>adminregform.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adminregform.aspx.designer.cs">
+      <DependentUpon>adminregform.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin_homepage.aspx.cs">
       <DependentUpon>admin_homepage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="admin_homepage.aspx.designer.cs">
       <DependentUpon>admin_homepage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="admin_regform.aspx.cs">
-      <DependentUpon>admin_regform.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="admin_regform.aspx.designer.cs">
-      <DependentUpon>admin_regform.aspx</DependentUpon>
     </Compile>
     <Compile Include="Category.aspx.cs">
       <DependentUpon>Category.aspx</DependentUpon>
@@ -143,12 +161,38 @@
       <DependentUpon>Category.aspx</DependentUpon>
     </Compile>
     <Compile Include="ConClass.cs" />
+    <Compile Include="Connected Services\BankService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Feedback.aspx.cs">
+      <DependentUpon>Feedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Feedback.aspx.designer.cs">
+      <DependentUpon>Feedback.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Login_form.aspx.cs">
       <DependentUpon>Login_form.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Login_form.aspx.designer.cs">
       <DependentUpon>Login_form.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mailpage.aspx.cs">
+      <DependentUpon>mailpage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mailpage.aspx.designer.cs">
+      <DependentUpon>mailpage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paymentpage.aspx.cs">
+      <DependentUpon>paymentpage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paymentpage.aspx.designer.cs">
+      <DependentUpon>paymentpage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Product.aspx.cs">
       <DependentUpon>Product.aspx</DependentUpon>
@@ -186,12 +230,26 @@
     <Compile Include="user_regform.aspx.designer.cs">
       <DependentUpon>user_regform.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Viewbill.aspx.cs">
+      <DependentUpon>Viewbill.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Viewbill.aspx.designer.cs">
+      <DependentUpon>Viewbill.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Viewcart.aspx.cs">
       <DependentUpon>Viewcart.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Viewcart.aspx.designer.cs">
       <DependentUpon>Viewcart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="viewfeed.aspx.cs">
+      <DependentUpon>viewfeed.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="viewfeed.aspx.designer.cs">
+      <DependentUpon>viewfeed.aspx</DependentUpon>
     </Compile>
     <Compile Include="Viewproducts.aspx.cs">
       <DependentUpon>Viewproducts.aspx</DependentUpon>
@@ -206,13 +264,6 @@
     </Compile>
     <Compile Include="WebForm1.aspx.designer.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="WebForm2.aspx.cs">
-      <DependentUpon>WebForm2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm2.aspx.designer.cs">
-      <DependentUpon>WebForm2.aspx</DependentUpon>
     </Compile>
     <Compile Include="viewsingleproduct.aspx.cs">
       <DependentUpon>viewsingleproduct.aspx</DependentUpon>
@@ -230,6 +281,16 @@
     <Content Include="fonts\ethnocentric\typodermic-eula-02-2014.pdf" />
     <Content Include="fonts\Poppins\Poppins-Bold.ttf" />
     <Content Include="fonts\Poppins\Poppins-Regular.ttf" />
+    <None Include="Connected Services\BankService\Service.wsdl" />
+    <None Include="Connected Services\BankService\Service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BankService\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BankService\Service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
     <Content Include="Site2.Master" />
     <Content Include="Site3.Master" />
@@ -245,6 +306,12 @@
     <Folder Include="NewFolder1\" />
     <Folder Include="PHOTO\" />
     <Folder Include="prod_image\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\BankService\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

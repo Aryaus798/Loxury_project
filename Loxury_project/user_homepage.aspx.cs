@@ -30,5 +30,10 @@ namespace Loxury_project
             Session ["sid"] = Cat_Id;
             Response.Redirect("Viewproducts.aspx");
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Feedback.aspx");
+        }
     }
 }

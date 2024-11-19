@@ -3,7 +3,7 @@
     
     <style type="text/css">
         body {
-            background-color: #fefbd8; /* Light yellowish background */
+            background-color: white; /* Light yellowish background */
             font-family: Arial, sans-serif;
           /*  margin: 0;
             padding: 20px;*/
@@ -43,6 +43,12 @@
         .submit-button:hover {
             background-color: #ffb300; /* Darker on hover */
         }
+        .auto-style1 {
+            width: 13px;
+        }
+        .auto-style2 {
+            width: 372px;
+        }
         </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -69,17 +75,32 @@
                 ADD OR EDIT</h6>
           </div>
           <div class="img-box">
-              <asp:ImageButton ID="ImageButton2" runat="server" Height="125px" ImageUrl="~/images/ring-img.jpg" OnClick="ImageButton2_Click" />
+              <asp:ImageButton ID="ImageButton2" runat="server" Height="125px" ImageUrl="~/images/product.jpg" OnClick="ImageButton2_Click" />
 &nbsp;</div>
           <div class="name">
             <h5>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PRODUCT
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PRODUCT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </h5>
+          </div>
+        </div>
+          <div class="box">
+          <div class="price">
+            <h6>
+                </h6>
+          </div>
+          <div class="img-box">
+              <asp:ImageButton ID="ImageButton3" runat="server" Height="125px" ImageUrl="~/images/download.jpg" OnClick="ImageButton3_Click"  />
+&nbsp;</div>
+          <div class="name">
+            <h5>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FEEDBACKS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </h5>
           </div>
         </div>
       </div>
     </div>
   </div>
+    
             
 </asp:Content>
 
